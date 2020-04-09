@@ -1,0 +1,14 @@
+
+#!/bin/bash
+
+echo "Save and push automation report to github"
+
+git config --global user.email "nhuttm@logivan.com"
+git config --global user.name "Nhut"
+git clone https://minhnhut1986:Nhut123456789@github.com/minhnhut1986/minhnhut1986.github.io.git
+rm -rf minhnhut1986.github.io/*
+cp -r target/site/serenity/* minhnhut1986.github.io/
+git -C minhnhut1986.github.io/ add .
+git -C minhnhut1986.github.io/ commit -m "Watch report at https://minhnhut1986.github.io/index.html"
+git -C minhnhut1986.github.io/ push https://minhnhut1986:Nhut123456789@github.com/minhnhut1986/minhnhut1986.github.io.git
+echo $TEST_STATUS

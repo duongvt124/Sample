@@ -1,0 +1,7 @@
+{
+  "version": 2,
+  "name": "serenity",
+  "builds": [
+      { "src": "target/site/serenity/*", "use": "@now/node" }
+  ]
+}
